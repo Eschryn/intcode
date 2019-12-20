@@ -24,6 +24,14 @@ impl<Os: OpSet> IntCode<Os> {
         }
     }
 
+    pub fn write(&mut self, address: usize, value: u32) {
+        if address > self.0.len() {
+            self.0.resize(address + 1, 0);
+        }
+
+        self.0[address] = value;
+    }
+
     /// Returns if the program should continue
     pub fn exec(&mut self, op: Op<Os>) -> bool {
         op.exec(&mut self.0)
