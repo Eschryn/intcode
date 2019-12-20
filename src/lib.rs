@@ -1,5 +1,6 @@
 mod int_code;
 mod op;
+pub mod aoc;
 
 pub use int_code::IntCode;
 pub use op::Op;
