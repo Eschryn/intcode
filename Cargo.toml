@@ -1,0 +1,7 @@
+[package]
+name = "intcode"
+version = "0.1.0"
+authors = ["Eschryn <8217655+Eschryn@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]
