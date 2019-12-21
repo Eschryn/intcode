@@ -1,4 +1,4 @@
-use crate::{ OpExec, OpSet, Op };
+use crate::{ IntCode, OpExec, OpSet, Op };
 
 #[derive(PartialEq)]
 pub enum OpCode {
@@ -37,3 +37,5 @@ impl OpSet for AocOpSet {
     type OpExec = OpExecuter;
     type OpCode = OpCode;
 }
+
+pub type AocIntCode = IntCode<AocOpSet>;
